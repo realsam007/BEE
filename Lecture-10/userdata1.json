@@ -1,0 +1,14 @@
+[
+  {
+    "name": "Samarth",
+    "email": "samrthbhardwaj@gmail.com",
+    "address": "Chandigarh",
+    "password": "12345"
+  },
+  {
+    "name": "Shalok",
+    "email": "shalok.sharma01@gmail.com",
+    "address": "Delhi",
+    "password": "shalok@123"
+  }
+]

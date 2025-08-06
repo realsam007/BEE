@@ -52,3 +52,40 @@ isAllowed(1)
         console.log("Error:", err);
     });
 
+//     function buyProduct(product_Name,cb){
+
+
+//     for(let i=0;i<products.length;i++){
+//         if(products[i].name==product_Name){
+//             return cb(null,products[i].price)
+//         }
+//     }
+//     cb("no Product Found",null);
+// }
+
+const products = [
+    { name: "Laptop", price: 60000 },
+    { name: "Mobile", price: 25000 },
+    { name: "Watch", price: 5000 }
+];
+
+function buyProduct(product_Name) {
+    return new Promise((resolve, reject) => {
+        for (let i = 0; i < products.length; i++) {
+            if (products[i].name === product_Name) {
+                return resolve(products[i].price);
+            }
+        }
+        reject("No product found");
+    });
+}
+
+buyProduct("Mobile")
+    .then((price) => {
+        console.log("Price:", price);
+    })
+    .catch((err) => {
+        console.log("Error:", err);
+    });
+
+
